@@ -5,16 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistema de Entregas - Ricardo Machado</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
-    <h1>Sistema de Gerenciamento de Entregas</h1>
-    <p>Aplicação Java para cálculo automático de fretes</p>
+    <div class="container header-container">
+      <h1><i class="fas fa-truck"></i> Sistema de Gerenciamento de Entregas</h1>
+      <p>Aplicação Java para cálculo automático de fretes</p>
+      <button class="btn-dark" onclick="toggleDarkMode()"><i class="fas fa-moon"></i> Alternar Tema</button>
+    </div>
   </header>
 
   <main class="container">
     <section class="card">
-      <h2>Descrição</h2>
+      <h2><i class="fas fa-info-circle"></i> Descrição</h2>
       <p>
         Sistema desenvolvido em <strong>Java</strong> com <strong>Programação Orientada a Objetos</strong>, 
         permitindo cadastro de clientes, motoristas e veículos. 
@@ -23,24 +27,39 @@
     </section>
 
     <section class="card">
-      <h2>Funcionalidades</h2>
+      <h2><i class="fas fa-cogs"></i> Funcionalidades</h2>
       <ul>
-        <li>Cadastro de clientes, motoristas e veículos.</li>
-        <li>Cálculo automático de frete (distância × valor/km).</li>
-        <li>Listagem de entregas e validação de dados.</li>
+        <li><i class="fas fa-user-plus"></i> Cadastro de clientes, motoristas e veículos.</li>
+        <li><i class="fas fa-calculator"></i> Cálculo automático de frete (distância × valor/km).</li>
+        <li><i class="fas fa-list"></i> Listagem de entregas e validação de dados.</li>
       </ul>
     </section>
 
     <section class="card">
-      <h2>Tecnologias</h2>
-      <p>Java, POO, Estruturas de Dados</p>
+      <h2><i class="fas fa-code"></i> Tecnologias</h2>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <h3><i class="fab fa-java"></i> Linguagem</h3>
+          <p>Java</p>
+        </div>
+        <div class="tech-item">
+          <h3><i class="fas fa-object-group"></i> Paradigma</h3>
+          <p>POO</p>
+        </div>
+        <div class="tech-item">
+          <h3><i class="fas fa-sitemap"></i> Estruturas</h3>
+          <p>Estruturas de Dados</p>
+        </div>
+      </div>
     </section>
 
-    <a href="index.html" class="btn-back">⬅ Voltar ao Portfólio</a>
+    <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar ao Portfólio</a>
   </main>
 
   <footer>
     © 2025 Ricardo Machado - Sistema de Entregas
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
