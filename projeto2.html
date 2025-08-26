@@ -8,38 +8,59 @@
 </head>
 <body>
   <header>
-    <div class="container">
+    <div class="container header-container">
       <h1>Chat Multicast</h1>
-      <p>Sistema de bate-papo em tempo real com Java, UDP e JSON</p>
-    
+      <p>
+        Sistema de comunicação em tempo real, desenvolvido em <strong>Java</strong>, com transmissão via <strong>UDP</strong> e mensagens estruturadas em <strong>JSON</strong>.
+        Suporta múltiplos usuários simultaneamente com threads, garantindo alta performance e confiabilidade.
+      </p>
       <button class="btn-dark" onclick="toggleDarkMode()">🌙 Alternar Tema</button>
     </div>
   </header>
 
   <main class="container">
+    <!-- Descrição do Projeto -->
     <section class="card">
       <h2>Descrição</h2>
       <p>
-        Um sistema de bate-papo em tempo real, desenvolvido em <strong>Java</strong>, 
-        utilizando <strong>UDP</strong> e threads para comunicação simultânea. 
-        As mensagens são formatadas em <strong>JSON</strong> (data, hora, usuário e texto).
+        O <strong>Chat Multicast</strong> é uma plataforma de comunicação em tempo real desenvolvida com <strong>Java</strong>, utilizando <strong>UDP</strong> para envio rápido e eficiente de mensagens e <strong>threads</strong> para suportar múltiplos usuários conectados simultaneamente. 
+        Todas as mensagens são estruturadas em <strong>JSON</strong>, contendo remetente, data, hora e conteúdo, o que facilita integração com outras aplicações e rastreabilidade de conversas.
+        <br><br>
+        Recursos avançados incluem autenticação de usuários, criptografia básica de mensagens, histórico local das conversas, notificações de presença online e gerenciamento de grupos e salas privadas. 
+        A arquitetura modular permite fácil expansão para integração com bots inteligentes, alertas automáticos e monitoramento de performance da rede, tornando o sistema ideal para ambientes corporativos ou aplicações de jogos online.
       </p>
     </section>
 
+    <!-- Funcionalidades Detalhadas -->
     <section class="card">
       <h2>Funcionalidades</h2>
       <ul>
-        <li>Envio e recebimento de mensagens em tempo real.</li>
-        <li>Mensagens com data, hora e remetente.</li>
-        <li>Suporte a múltiplos usuários conectados simultaneamente.</li>
+        <li>Envio e recebimento de mensagens em tempo real com baixo tempo de latência.</li>
+        <li>Mensagens estruturadas em JSON contendo data, hora, usuário e conteúdo.</li>
+        <li>Suporte a múltiplos usuários simultâneos com threads independentes.</li>
+        <li>Autenticação de usuários e gerenciamento de permissões.</li>
+        <li>Criptografia básica para segurança das mensagens.</li>
+        <li>Histórico local das conversas e rastreabilidade.</li>
+        <li>Notificações de presença de usuários online.</li>
+        <li>Suporte a salas privadas, grupos e integração com bots inteligentes.</li>
+        <li>Arquitetura modular para fácil expansão e integração com APIs externas.</li>
       </ul>
     </section>
 
+    <!-- Tecnologias Utilizadas -->
     <section class="card">
-      <h2>Tecnologias</h2>
-      <p>Java, Sockets UDP, Threads, JSON</p>
+      <h2>Tecnologias e Conceitos</h2>
+      <p>
+        <strong>Linguagem:</strong> Java <br>
+        <strong>Comunicação de Rede:</strong> Sockets UDP, Threads <br>
+        <strong>Estrutura de Mensagens:</strong> JSON <br>
+        <strong>Segurança:</strong> Autenticação, criptografia básica <br>
+        <strong>Paradigma:</strong> Programação Orientada a Objetos (POO) <br>
+        <strong>Arquitetura:</strong> Modular e expansível para futuras integrações
+      </p>
     </section>
 
+    <!-- Botão de Voltar -->
     <a href="index.html" class="btn-back">⬅ Voltar ao Portfólio</a>
   </main>
 
@@ -47,7 +68,6 @@
     © 2025 Ricardo Machado - Chat Multicast
   </footer>
 
-  
   <script src="script.js"></script>
 </body>
 </html>

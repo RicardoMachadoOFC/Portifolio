@@ -5,80 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistema de Vendas MDI - Ricardo Machado</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
     <div class="container header-container">
-      <h1>Sistema de Vendas MDI</h1>
+      <h1><i class="fas fa-cash-register"></i> Sistema de Vendas MDI</h1>
       <p>
         Sistema MDI (Multiple Document Interface) desenvolvido em Java com arquitetura MVC, 
         integração com MySQL, dois perfis de usuário (Administrador e Padrão) e operações CRUD completas
         para categorias, produtos, clientes e vendas.
       </p>
-      <button class="btn-dark" onclick="toggleDarkMode()">🌙 Alternar Tema</button>
+      <button class="btn-dark" onclick="toggleDarkMode()"><i class="fas fa-moon"></i> Alternar Tema</button>
     </div>
   </header>
 
   <main class="container">
+    <section class="card">
+      <h2><i class="fas fa-images"></i> Screenshots do Sistema</h2>
+      <div class="screenshots-container">
+        <div class="screenshot-item">
+          <h3><i class="fas fa-sign-in-alt"></i> Tela de Login</h3>
+          <div class="image-container">
+            <div class="image-placeholder">
+              <i class="fas fa-image"></i>
+               <img src="print1.PNG" alt="Tela de Gestão de Produtos"> 
+            </div>
+          </div>
+        </div>
+        <div class="screenshot-item">
+          <h3><i class="fas fa-shopping-cart"></i> Registro de Vendas</h3>
+          <div class="image-container">
+            <div class="image-placeholder">
+              <i class="fas fa-image"></i>
+               <img src="print 2.PNG" alt="Tela de Gestão de Produtos"> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
    
     <section class="card">
-      <h2>Objetivo do Projeto</h2>
+      <h2><i class="fas fa-bullseye"></i> Objetivo do Projeto</h2>
       <p>
         Desenvolver um sistema MDI (Multiple Document Interface) em Java com:
       </p>
       <ul>
-        <li>Interface gráfica funcional</li>
-        <li>Integração com banco de dados relacional (MySQL)</li>
-        <li>Suporte a 2 perfis de usuário (Administrador e Padrão)</li>
-        <li>Operações CRUD completas em 3+ telas</li>
-        <li>Geração de relatórios com filtragem de dados</li>
-        <li>Tela de login integrada</li>
-        <li>Tratamento de exceções com feedback</li>
-        <li>Arquitetura MVC</li>
+        <li><i class="fas fa-check-circle"></i> Interface gráfica funcional</li>
+        <li><i class="fas fa-check-circle"></i> Integração com banco de dados relacional (MySQL)</li>
+        <li><i class="fas fa-check-circle"></i> Suporte a 2 perfis de usuário (Administrador e Padrão)</li>
+        <li><i class="fas fa-check-circle"></i> Operações CRUD completas em 3+ telas</li>
+        <li><i class="fas fa-check-circle"></i> Geração de relatórios com filtragem de dados</li>
+        <li><i class="fas fa-check-circle"></i> Tela de login integrada</li>
+        <li><i class="fas fa-check-circle"></i> Tratamento de exceções com feedback</li>
+        <li><i class="fas fa-check-circle"></i> Arquitetura MVC</li>
       </ul>
     </section>
 
-    
     <section class="card">
-      <h2>Funcionalidades Implementadas</h2>
+      <h2><i class="fas fa-cogs"></i> Funcionalidades Implementadas</h2>
       <h3>Sistema Principal</h3>
       <ul>
-        <li>Autenticação de usuários com perfis (Admin/Padrão)</li>
-        <li>Dashboard MDI com navegação integrada</li>
-        <li>Tratamento de exceções com feedback visual</li>
+        <li><i class="fas fa-user-shield"></i> Autenticação de usuários com perfis (Admin/Padrão)</li>
+        <li><i class="fas fa-tachometer-alt"></i> Dashboard MDI com navegação integrada</li>
+        <li><i class="fas fa-exclamation-triangle"></i> Tratamento de exceções com feedback visual</li>
       </ul>
       
       <h3>Módulos CRUD</h3>
       <div class="features-grid">
         <div class="feature-item">
-          <h4>Categorias</h4>
+          <h4><i class="fas fa-tags"></i> Categorias</h4>
           <p>Create, Read, Update, Delete</p>
         </div>
         <div class="feature-item">
-          <h4>Produtos</h4>
+          <h4><i class="fas fa-box"></i> Produtos</h4>
           <p>Create, Read, Update, Delete</p>
         </div>
         <div class="feature-item">
-          <h4>Clientes</h4>
+          <h4><i class="fas fa-users"></i> Clientes</h4>
           <p>Create, Read, Update, Delete</p>
         </div>
         <div class="feature-item">
-          <h4>Vendas</h4>
+          <h4><i class="fas fa-shopping-cart"></i> Vendas</h4>
           <p>Registro + Gestão de Itens</p>
         </div>
       </div>
     </section>
 
-    
     <section class="card">
-      <h2>Perfis de Acesso</h2>
+      <h2><i class="fas fa-user-lock"></i> Perfis de Acesso</h2>
       <div class="profiles">
         <div class="profile">
-          <h3>Administrador (ADMIN)</h3>
+          <h3><i class="fas fa-crown"></i> Administrador (ADMIN)</h3>
           <p>Acesso total a todos os CRUDs, relatórios e gestão de usuários</p>
         </div>
         <div class="profile">
-          <h3>Usuário Padrão (PADRAO)</h3>
+          <h3><i class="fas fa-user"></i> Usuário Padrão (PADRAO)</h3>
           <p>Acesso restrito apenas ao módulo de vendas e consultas</p>
         </div>
       </div>
@@ -100,31 +122,30 @@
           </tr>
           <tr>
             <td>PADRAO</td>
-            <td> vinicius</td>
+            <td>vinicius</td>
             <td>1234</td>
           </tr>
         </tbody>
       </table>
     </section>
 
-    
     <section class="card">
-      <h2>Tecnologias e Arquitetura</h2>
+      <h2><i class="fas fa-code"></i> Tecnologias e Arquitetura</h2>
       <div class="tech-grid">
         <div class="tech-item">
-          <h3>Linguagem</h3>
+          <h3><i class="fab fa-java"></i> Linguagem</h3>
           <p>Java</p>
         </div>
         <div class="tech-item">
-          <h3>Interface</h3>
+          <h3><i class="fas fa-desktop"></i> Interface</h3>
           <p>Java Swing (MDI)</p>
         </div>
         <div class="tech-item">
-          <h3>Banco de Dados</h3>
+          <h3><i class="fas fa-database"></i> Banco de Dados</h3>
           <p>MySQL</p>
         </div>
         <div class="tech-item">
-          <h3>Arquitetura</h3>
+          <h3><i class="fas fa-sitemap"></i> Arquitetura</h3>
           <p>MVC (Model-View-Controller)</p>
         </div>
       </div>
@@ -132,7 +153,7 @@
       <h3>Estrutura do Projeto</h3>
       <div class="package-structure">
         <div class="package">
-          <h4>Pacote Model</h4>
+          <h4><i class="fas fa-cube"></i> Pacote Model</h4>
           <ul>
             <li>Entidades: Categoria, Cliente, Produto, Usuario, Venda, VendaDetalhes</li>
             <li>Conexão BD: Conexao.java, ConexaoMysql.java</li>
@@ -140,7 +161,7 @@
           </ul>
         </div>
         <div class="package">
-          <h4>Pacote View</h4>
+          <h4><i class="fas fa-eye"></i> Pacote View</h4>
           <ul>
             <li>Telas: LoginForm, Dashboard (MDI Principal)</li>
             <li>CRUDs: CategoriaView, ProdutoView, ClienteView</li>
@@ -148,13 +169,13 @@
           </ul>
         </div>
         <div class="package">
-          <h4>Pacote Controller</h4>
+          <h4><i class="fas fa-gamepad"></i> Pacote Controller</h4>
           <ul>
             <li>Controladores: AutenticacaoController, CategoriaController, ClienteController, ProdutoController, UsuarioController, VendaController</li>
           </ul>
         </div>
         <div class="package">
-          <h4>Pacote Util</h4>
+          <h4><i class="fas fa-tools"></i> Pacote Util</h4>
           <ul>
             <li>LoginDto.java, NegocioException.java</li>
             <li>TableModels: CategoriaTableModel, ClienteTableModel, ProductoTableModel</li>
@@ -163,9 +184,8 @@
       </div>
     </section>
 
-    
     <section class="card">
-      <h2>Esquema do Banco de Dados</h2>
+      <h2><i class="fas fa-database"></i> Esquema do Banco de Dados</h2>
       <h3>Tabelas Principais</h3>
       <table class="db-table">
         <thead>
@@ -208,8 +228,7 @@
       <p><strong>venda_item:</strong> venda_id (FK), produto_id (FK), quantidade, total</p>
     </section>
 
-    
-    <a href="index.html" class="btn-back">⬅ Voltar ao Portfólio</a>
+    <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar ao Portfólio</a>
   </main>
 
   <footer>
