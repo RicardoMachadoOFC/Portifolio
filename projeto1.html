@@ -3,45 +3,219 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sistema de Vendas - Ricardo Machado</title>
+  <title>Sistema de Vendas MDI - Ricardo Machado</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Sistema de Vendas</h1>
-    <p>Gestão completa de vendas em Java com integração a banco de dados</p>
-    
+    <div class="container header-container">
+      <h1>Sistema de Vendas MDI</h1>
+      <p>
+        Sistema MDI (Multiple Document Interface) desenvolvido em Java com arquitetura MVC, 
+        integração com MySQL, dois perfis de usuário (Administrador e Padrão) e operações CRUD completas
+        para categorias, produtos, clientes e vendas.
+      </p>
+      <button class="btn-dark" onclick="toggleDarkMode()">🌙 Alternar Tema</button>
+    </div>
   </header>
 
   <main class="container">
+   
     <section class="card">
-      <h2>Descrição</h2>
+      <h2>Objetivo do Projeto</h2>
       <p>
-        Projeto desenvolvido em <strong>Java</strong> com arquitetura <strong>MVC</strong>, 
-        interface gráfica <strong>JavaFX/Swing</strong>, operações CRUD e integração ao 
-        banco de dados <strong>MySQL</strong>.
+        Desenvolver um sistema MDI (Multiple Document Interface) em Java com:
       </p>
-    </section>
-
-    <section class="card">
-      <h2>Funcionalidades</h2>
       <ul>
-        <li>Login de vendedor para cadastrar produtos, usuários e vendas.</li>
-        <li>Login de cliente para visualizar produtos disponíveis.</li>
-        <li>Controle de estoque e geração de relatórios básicos.</li>
+        <li>Interface gráfica funcional</li>
+        <li>Integração com banco de dados relacional (MySQL)</li>
+        <li>Suporte a 2 perfis de usuário (Administrador e Padrão)</li>
+        <li>Operações CRUD completas em 3+ telas</li>
+        <li>Geração de relatórios com filtragem de dados</li>
+        <li>Tela de login integrada</li>
+        <li>Tratamento de exceções com feedback</li>
+        <li>Arquitetura MVC</li>
       </ul>
     </section>
 
+    
     <section class="card">
-      <h2>Tecnologias</h2>
-      <p>Java, JavaFX, Swing, MySQL, POO, MVC</p>
+      <h2>Funcionalidades Implementadas</h2>
+      <h3>Sistema Principal</h3>
+      <ul>
+        <li>Autenticação de usuários com perfis (Admin/Padrão)</li>
+        <li>Dashboard MDI com navegação integrada</li>
+        <li>Tratamento de exceções com feedback visual</li>
+      </ul>
+      
+      <h3>Módulos CRUD</h3>
+      <div class="features-grid">
+        <div class="feature-item">
+          <h4>Categorias</h4>
+          <p>Create, Read, Update, Delete</p>
+        </div>
+        <div class="feature-item">
+          <h4>Produtos</h4>
+          <p>Create, Read, Update, Delete</p>
+        </div>
+        <div class="feature-item">
+          <h4>Clientes</h4>
+          <p>Create, Read, Update, Delete</p>
+        </div>
+        <div class="feature-item">
+          <h4>Vendas</h4>
+          <p>Registro + Gestão de Itens</p>
+        </div>
+      </div>
     </section>
 
+    
+    <section class="card">
+      <h2>Perfis de Acesso</h2>
+      <div class="profiles">
+        <div class="profile">
+          <h3>Administrador (ADMIN)</h3>
+          <p>Acesso total a todos os CRUDs, relatórios e gestão de usuários</p>
+        </div>
+        <div class="profile">
+          <h3>Usuário Padrão (PADRAO)</h3>
+          <p>Acesso restrito apenas ao módulo de vendas e consultas</p>
+        </div>
+      </div>
+      
+      <h3>Credenciais de Teste</h3>
+      <table class="credentials-table">
+        <thead>
+          <tr>
+            <th>Perfil</th>
+            <th>Usuário</th>
+            <th>Senha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ADMIN</td>
+            <td>ric</td>
+            <td>123</td>
+          </tr>
+          <tr>
+            <td>PADRAO</td>
+            <td> vinicius</td>
+            <td>1234</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    
+    <section class="card">
+      <h2>Tecnologias e Arquitetura</h2>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <h3>Linguagem</h3>
+          <p>Java</p>
+        </div>
+        <div class="tech-item">
+          <h3>Interface</h3>
+          <p>Java Swing (MDI)</p>
+        </div>
+        <div class="tech-item">
+          <h3>Banco de Dados</h3>
+          <p>MySQL</p>
+        </div>
+        <div class="tech-item">
+          <h3>Arquitetura</h3>
+          <p>MVC (Model-View-Controller)</p>
+        </div>
+      </div>
+      
+      <h3>Estrutura do Projeto</h3>
+      <div class="package-structure">
+        <div class="package">
+          <h4>Pacote Model</h4>
+          <ul>
+            <li>Entidades: Categoria, Cliente, Produto, Usuario, Venda, VendaDetalhes</li>
+            <li>Conexão BD: Conexao.java, ConexaoMysql.java</li>
+            <li>DAOs: AutenticacaoDao, CategoriaDao, ClienteDao, ProdutoDao, UsuarioDao, VendaDao</li>
+          </ul>
+        </div>
+        <div class="package">
+          <h4>Pacote View</h4>
+          <ul>
+            <li>Telas: LoginForm, Dashboard (MDI Principal)</li>
+            <li>CRUDs: CategoriaView, ProdutoView, ClienteView</li>
+            <li>Diálogos: dialogUsuario, dialogVenda</li>
+          </ul>
+        </div>
+        <div class="package">
+          <h4>Pacote Controller</h4>
+          <ul>
+            <li>Controladores: AutenticacaoController, CategoriaController, ClienteController, ProdutoController, UsuarioController, VendaController</li>
+          </ul>
+        </div>
+        <div class="package">
+          <h4>Pacote Util</h4>
+          <ul>
+            <li>LoginDto.java, NegocioException.java</li>
+            <li>TableModels: CategoriaTableModel, ClienteTableModel, ProductoTableModel</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="card">
+      <h2>Esquema do Banco de Dados</h2>
+      <h3>Tabelas Principais</h3>
+      <table class="db-table">
+        <thead>
+          <tr>
+            <th>Tabela</th>
+            <th>Campos Chave</th>
+            <th>Relacionamentos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>categoria</td>
+            <td>id (PK), nome (UNIQUE)</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>cliente</td>
+            <td>id (PK), cpf (UNIQUE)</td>
+            <td>Relaciona com venda</td>
+          </tr>
+          <tr>
+            <td>produto</td>
+            <td>id (PK), nome (UNIQUE)</td>
+            <td>categoria_id (FK), usuario_id (FK)</td>
+          </tr>
+          <tr>
+            <td>usuario</td>
+            <td>id (PK), username (UNIQUE)</td>
+            <td>Perfil (ADMIN/PADRAO)</td>
+          </tr>
+          <tr>
+            <td>venda</td>
+            <td>id (PK)</td>
+            <td>cliente_id (FK), usuario_id (FK)</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <h3>Tabela Associativa (N:N)</h3>
+      <p><strong>venda_item:</strong> venda_id (FK), produto_id (FK), quantidade, total</p>
+    </section>
+
+    
     <a href="index.html" class="btn-back">⬅ Voltar ao Portfólio</a>
   </main>
 
   <footer>
-    © 2025 Ricardo Machado - Sistema de Vendas
+    2025 Ricardo Machado - Sistema de Vendas MDI
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
