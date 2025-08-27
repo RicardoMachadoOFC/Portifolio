@@ -3,67 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transferência de Arquivos - Ricardo Machado</title>
+  <title>Arquitetura de Protocolo - Ricardo Machado</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
     <div class="container header-container">
-      <h1><i class="fas fa-exchange-alt"></i> Transferência de Arquivos</h1>
-      <p>Protocolo customizado em Java com TCP, JSON e validação de hash</p>
-      <button class="btn-dark" onclick="toggleDarkMode()"><i class="fas fa-moon"></i> Alternar Tema</button>
+      <h1><i class="fas fa-exchange-alt"></i> Diálogo entre Máquinas</h1>
+      <p>Uma exploração arquitetural em comunicação distribuída através de um protocolo proprietário, concebido para maximizar confiabilidade, integridade e eficiência na troca de dados estruturados entre sistemas heterogêneos.</p>
+      <button class="btn-dark" onclick="toggleDarkMode()"><i class="fas fa-moon"></i> Alternar Perspectiva</button>
     </div>
   </header>
 
   <main class="container">
     <section class="card">
-      <h2><i class="fas fa-info-circle"></i> Descrição</h2>
+      <h2><i class="fas fa-project-diagram"></i> Filosofia do Protocolo</h2>
       <p>
-        Sistema de transferência de arquivos via <strong>TCP</strong>, 
-        com protocolo customizado baseado em comandos <strong>LIST</strong>, 
-        <strong>PUT</strong> e <strong>GET</strong>. 
-        Implementa suporte a <strong>Base64</strong> e verificação por hash.
+        Este projeto não se limita a transmitir dados entre sistemas: ele formaliza uma linguagem de comunicação entre máquinas. 
+        Cada pacote trocado contém informações de contexto, estado e intenção, permitindo que as entidades computacionais interpretem 
+        o significado das operações de forma semântica, não apenas sintática.
+      </p>
+      <p>
+        O protocolo implementa uma série de handshakes estruturados, validações de integridade e confirmações mútuas. Cada operação é atômica, rastreável e reversível, garantindo consistência mesmo em cenários de falha parcial ou interrupções de rede.
       </p>
     </section>
 
     <section class="card">
-      <h2><i class="fas fa-cogs"></i> Funcionalidades</h2>
-      <ul>
-        <li><i class="fas fa-list"></i> Listagem de arquivos disponíveis no servidor.</li>
-        <li><i class="fas fa-upload"></i> Envio (PUT) e download (GET) de arquivos.</li>
-        <li><i class="fas fa-shield-alt"></i> Validação de integridade via hash MD5.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2><i class="fas fa-code"></i> Tecnologias</h2>
+      <h2><i class="fas fa-tasks"></i> Coreografia de Operações</h2>
       <div class="tech-grid">
         <div class="tech-item">
-          <h3><i class="fab fa-java"></i> Linguagem</h3>
-          <p>Java</p>
+          <h3><i class="fas fa-list-ol"></i> LIST: Descoberta de Estado</h3>
+          <p>Esta operação não apenas retorna listas de recursos, mas identifica o estado atual de cada entidade, permitindo sincronização inicial e detecção de inconsistências antes do envio de dados críticos.</p>
         </div>
         <div class="tech-item">
-          <h3><i class="fas fa-network-wired"></i> Protocolo</h3>
-          <p>TCP Sockets</p>
+          <h3><i class="fas fa-file-export"></i> PUT: Entrega Contextual</h3>
+          <p>Além de transferir arquivos, cada PUT acompanha metadados detalhados, como timestamps, versões e hash de integridade. Isso assegura que o receptor possa validar não apenas a presença dos dados, mas sua autenticidade e consistência contextual.</p>
         </div>
         <div class="tech-item">
-          <h3><i class="fas fa-code"></i> Formato</h3>
-          <p>JSON</p>
-        </div>
-        <div class="tech-item">
-          <h3><i class="fas fa-lock"></i> Segurança</h3>
-          <p>Base64, Hash MD5</p>
+          <h3><i class="fas fa-file-import"></i> GET: Recuperação Segura</h3>
+          <p>GET é mais do que solicitar dados: ele garante que a requisição corresponda ao estado esperado do recurso, com validações de integridade e verificação de hash para assegurar que nenhuma alteração indesejada ocorreu no caminho.</p>
         </div>
       </div>
     </section>
 
-    <!-- Botão voltar com estilo aplicado -->
-    <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar ao Portfólio</a>
+    <section class="card">
+      <h2><i class="fas fa-brain"></i> Arquitetura de Decisões</h2>
+      <ul>
+        <li><i class="fas fa-code-branch"></i> <strong>JSON como Lingua Franca:</strong> Facilita a leitura e depuração de mensagens entre sistemas heterogêneos, permitindo evolução sem quebra de compatibilidade.</li>
+        <li><i class="fas fa-fingerprint"></i> <strong>Hash MD5 como Contrato de Integridade:</strong> Cada transação é acompanhada de um hash que confirma a exatidão dos dados transferidos, atuando como "prova digital" do envio correto.</li>
+        <li><i class="fas fa-sync-alt"></i> <strong>TCP como Fundação Confiável:</strong> Aproveita garantias de entrega, sequenciamento e controle de congestionamento, enquanto adiciona semântica aplicada às mensagens.</li>
+        <li><i class="fas fa-layer-group"></i> <strong>Base64 como Ponte Universal:</strong> Permite a representação de dados binários em um formato seguro e padronizado, compatível com sistemas que operam em diferentes conjuntos de caracteres e protocolos.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2><i class="fas fa-flask"></i> Experimentos em Robustez</h2>
+      <p>O protocolo foi testado em condições controladas e adversas para validar tolerância a falhas:</p>
+      <ul>
+        <li><i class="fas fa-network-wired"></i> Reconexão automática e recuperação de sessão após quedas de rede.</li>
+        <li><i class="fas fa-file-contract"></i> Manipulação deliberada de arquivos corrompidos para validar detecção de inconsistências.</li>
+        <li><i class="fas fa-clock"></i> Timeouts adaptativos que respeitam o tamanho da transferência e o estado atual da operação.</li>
+        <li><i class="fas fa-expand-arrows-alt"></i> Transferência eficiente de grandes volumes de dados, com uso otimizado de memória e threads.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2><i class="fas fa-code"></i> Expressividade Técnica</h2>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <h3><i class="fab fa-java"></i> Java como Motor de Abstração</h3>
+          <p>Permite construção de módulos altamente reutilizáveis, gestão de threads e controle refinado de E/S, essencial para a execução confiável do protocolo.</p>
+        </div>
+        <div class="tech-item">
+          <h3><i class="fas fa-network-wired"></i> TCP como Canal Confiável</h3>
+          <p>Proporciona entrega ordenada e controle de fluxo, sobre a qual se implementam as regras semânticas do protocolo.</p>
+        </div>
+        <div class="tech-item">
+          <h3><i class="fas fa-code"></i> JSON como Vocabulário Estruturado</h3>
+          <p>Equilibra legibilidade humana e eficiência de parsing para sistemas automatizados, permitindo auditoria e debug detalhados.</p>
+        </div>
+        <div class="tech-item">
+          <h3><i class="fas fa-lock"></i> Hash MD5 como Testemunha</h3>
+          <p>Serve como validação final da integridade dos dados, garantindo que transmissões críticas não sejam comprometidas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><i class="fas fa-rocket"></i> Além do Óbvio</h2>
+      <p>O protocolo não se limita à transferência de arquivos: ele formaliza padrões de comportamento e comunicação entre sistemas, abordando aspectos críticos de engenharia distribuída:</p>
+      <ul>
+        <li><i class="fas fa-cogs"></i> <strong>Design de Protocolos:</strong> Estruturas eficientes de comunicação, minimizando ambiguidades e redundâncias.</li>
+        <li><i class="fas fa-shield-alt"></i> <strong>Verificação de Integridade:</strong> Garantias de que cada transação respeita os contratos de dados estabelecidos.</li>
+        <li><i class="fas fa-sync"></i> <strong>Gerenciamento de Estado:</strong> Persistência e rastreabilidade de operações, permitindo rollback e auditoria detalhada.</li>
+        <li><i class="fas fa-bolt"></i> <strong>Tratamento de Erros:</strong> Recuperação resiliente frente a falhas, interrupções e inconsistências de rede.</li>
+      </ul>
+    </section>
+
+    <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Retornar ao Portfólio</a>
   </main>
 
   <footer>
-    © 2025 Ricardo Machado - Transferência de Arquivos
+    © 2025 Ricardo Machado - Exploração Avançada em Protocolos de Comunicação
   </footer>
 
   <script src="script.js"></script>
